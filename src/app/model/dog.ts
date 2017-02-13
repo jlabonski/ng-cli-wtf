@@ -39,11 +39,11 @@ export class Dog {
 #include <stdlib.h>
 #pragma message "Compiling " __FILE__ "..."
 
+/* Behold, Duff's Device */
 int main(void)
 {
 
-  send(to, from, count)
-  register short *to, *from;
+  register short *to = 0xDEADBEEF, *from = 0xBEEFDEAD;
   register count;
   {
     register n = (count + 7) / 8;
